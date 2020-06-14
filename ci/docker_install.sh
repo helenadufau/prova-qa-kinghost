@@ -13,10 +13,6 @@ apt-get install git -yqq
 curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-9.phar
 chmod +x /usr/local/bin/phpunit
 
-# Install phpunit9 dependencies
-apt-get install php-xml
-apt-get install php7.4-mbstring
-
 # Install composer dependencies
 - wget https://composer.github.io/installer.sig -O - -q | tr -d '\n' > installer.sig
 - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
