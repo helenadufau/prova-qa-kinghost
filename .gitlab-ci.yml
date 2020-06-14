@@ -19,4 +19,4 @@ unit_tests:
   script:
   - phpunit --configuration phpunit.xml
   dependencies:
-  - install
+  - install_dependencies
