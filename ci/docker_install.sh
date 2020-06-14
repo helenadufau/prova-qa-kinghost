@@ -10,10 +10,6 @@ apt-get update -yqq
 apt-get install git -yqq
 apt-get install wget -yqq
 
-# Install phpunit 9
-curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-9.phar
-chmod +x /usr/local/bin/phpunit
-
 # Install composer dependencies
 wget https://composer.github.io/installer.sig -O - -q | tr -d '\n' > installer.sig
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
