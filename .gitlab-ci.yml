@@ -1,0 +1,22 @@
+stages:
+  - install
+  - test
+
+# Image of php7.4
+image: php:7.4
+
+cache:
+  paths:
+  - vendor/
+
+install_dependencies:
+  stage: install
+  script:
+  - bash ci/docker_install.sh > /dev/null
+
+unit_tests:
+  stage: test
+  script:
+  - phpunit --configuration phpunit.xml
+  dependencies:
+  - install
