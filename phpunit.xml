@@ -7,9 +7,13 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         stopOnFailure="false">
-
-
+         stopOnFailure="false"
+         stopOnError="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         testdox="false"
+         noIteraction="true">
+    	
     <testsuites>
         <testsuite name="Test Suite">
             <directory suffix="Test.php">tests</directory>
@@ -17,9 +21,12 @@
     </testsuites>
 
     <filter>
-    <whitelist>
-        <directory suffix=".php">src/</directory>
-    </whitelist>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
     </filter>
 
+    <extensions>
+        <extension class="PHPUnit\Runner\Extension\TestHooksHandler" />
+    </extensions>
 </phpunit>
